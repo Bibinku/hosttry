@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'index.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="card w-100">
+              <div class="card-body p-4">
+                <h5 class="card-title fw-semibold mb-4">Occupancy  Details</h5>
+                <div class="table-responsive">
+                  <table class="table text-nowrap mb-0 align-middle">
+                    <thead class="text-dark fs-4">
+                      <tr>
+
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Name of occupancy</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Description</h6>
+                        </th>
+
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Price</h6>
+                        </th>
+
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Advance Price</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Room Image 1</h6>
+                        </th>
+
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Room Image 2</h6>
+                        </th>
+
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Room Image 3</h6>
+                        </th>
+
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Edit</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Delete</h6>
+                        </th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+
+                      <tr>
+
+                        <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-1">{{i.name}}</h6>
+
+                        </td>
+                        <td class="border-bottom-0">
+                          <p class="mb-0 fw-normal">{{i.description}}</p>
+                        </td>
+                        <td class="border-bottom-0">
+                          <p class="mb-0 fw-normal">{{i.price}}</p>
+                        </td>
+
+                        <td class="border-bottom-0">
+                          <p class="mb-0 fw-normal">{{i.advprice}}</p>
+                        </td>
+                        <td class="border-bottom-0">
+                          <p class="mb-0 fw-normal">{{i.roomimage1}}</p>
+                        </td>
+
+                        <td class="border-bottom-0">
+                          <p class="mb-0 fw-normal">{{i.roomimage2}}</p>
+                        </td>
+
+                        <td class="border-bottom-0">
+                          <p class="mb-0 fw-normal">{{i.roomimage3}}</p>
+                        </td>
+
+
+
+
+
+
+                        <td>
+                              <a href="{% url 'editdetails' Did=i.id %}">
+                                <button type="button" class="btn btn-outline-dark m-1">Edit</button>
+                              </a>
+                            </td>
+
+                          <td>
+                              <a href="{% url 'deletedetails' Delid=i.id %}">
+                              <button type="button" class="btn btn-outline-danger m-1">Delete</button>                              </a>
+                            </td>
+
+
+
+                      </tr>
+                     {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+</body>
+</html>
+{% endblock %}

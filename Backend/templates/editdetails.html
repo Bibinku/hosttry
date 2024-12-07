@@ -1,55 +1,53 @@
 <!DOCTYPE html>
+<html lang="en">
 {% extends 'index.html' %}
 {% block content %}
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
- <section>
-     <div class="container-fluid">
-        <div class="container-fluid">
-          <div class="card">
+<div class="card">
             <div class="card-body">
-              <h5 class="card-title fw-semibold mb-4">Add Occupancy Details</h5>
+              <h5 class="card-title fw-semibold mb-4">Occupancy Details</h5>
               <div class="card">
                 <div class="card-body">
-                    <form class="forms-sample" method="post" action="{% url 'savedetails' %}" enctype="multipart/form-data" >
-                      {% csrf_token %}
+                  <form method="post" action="{% url 'updatedetails' Uid=data.id %}">
+                       {% csrf_token %}
+
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Name of occupancy </label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" required aria-describedby="emailHelp" name="name">
+                      <input type="text" class="form-control" id="exampleInputEmail1"  aria-describedby="emailHelp" required name="name" value="{{data.name}}">
                     </div><br>
 
                      <div class="form-group">
                       <label for="exampleInputEmail1" class="form-label"> Description </label>
-                      <textarea  class="form-control" id="exampleTextarea1" rows="4" required placeholder="Description" name="description"></textarea>
+                      <textarea  class="form-control" id="exampleTextarea1" rows="4" placeholder="Description" required name="description">{{data.description}}</textarea>
                     </div><br>
 
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Price</label>
-                      <input type="number" class="form-control" id="exampleInputPassword1" required name="price">
+                      <input type="number" class="form-control" id="exampleInputPassword1" name="price" required  value="{{data.price}}">
                     </div><br>
 
 
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Advance Price</label>
-                      <input type="number" class="form-control" id="exampleInputPsword1" required name="advprice">
+                      <input type="number" class="form-control" id="exampleInputPsword1" name="advprice" required value="{{data.advprice}}">
                     </div><br>
 
                     <div class="form-group">
 
                        <label for="exampleInputPassword1" class="form-label">Room Image 1</label>
 
-                      <input type="file" class="form-control" placeholder=" Image" required name="roomimage1">
+                      <input type="file" class="form-control" placeholder=" Image" name="roomimage1" required value="{{data.roomimage1}}">
                     </div><br><br>
 
                     <div class="form-group">
 
                        <label for="exampleInputPassword1" class="form-label">Room Image 2</label>
 
-                      <input type="file" class="form-control" placeholder=" Image" required name="roomimage2">
+                      <input type="file" class="form-control" placeholder=" Image" name="roomimage2" required value="{{data.roomimage2}}">
                     </div><br><br>
 
 
@@ -57,7 +55,7 @@
 
                        <label for="exampleInputPassword1" class="form-label">Room Image 3</label>
 
-                      <input type="file" class="form-control" placeholder=" Image" required name="roomimage3">
+                      <input type="file" class="form-control" placeholder=" Image" name="roomimage3" required value="{{data.roomimage3}}">
                     </div><br><br>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -67,9 +65,7 @@
 
             </div>
           </div>
-        </div>
-      </div>
- </section>
+
 
 </body>
 </html>
