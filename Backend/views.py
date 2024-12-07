@@ -2,10 +2,12 @@ from django.shortcuts import render, redirect
 from Backend.models import DetailsDB
 from django.core.files.storage import FileSystemStorage
 from django.utils.datastructures import MultiValueDictKeyError
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login
+from django.contrib import messages
 
 
 # Create your views here.
-
 
 # Crete a function called indexpage
 
@@ -74,12 +76,29 @@ def updatedetails(req,Uid):
     return redirect(displaydetails)
 
 
-
 def deletedetails(req,Delid):
     data=DetailsDB.objects.filter(id=Delid)
     data.delete()
     return redirect(displaydetails)
 
+def adminlogin(req):
+    return render(req,"adminlogin.html")
 
-
-
+def admin(request):
+    if request.method=="POST":
+        a=request.POST.get('username')
+        b=request.POST.get('pass')
+        if User.objects.filter(username__contains=a).exists():
+            x=authenticate(username=a,password=b)
+            if x is not None:
+                login(request,x)
+                request.session['username']=a
+                request.session['password']=b
+                messages.success(request,"Welcome..")
+                return redirect(indexpage)
+            else:
+                messages.warning(request,"Invaild username or password")
+                return redirect(adminlogin)
+        else:
+            messages.warning(request,"Please check before enter ")
+            return redirect(adminlogin)

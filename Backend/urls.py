@@ -10,5 +10,7 @@ urlpatterns = [
     path('editdetails/<int:Did>/', views.editdetails, name="editdetails"),
     path('updatedetails/<int:Uid>/', views.updatedetails, name="updatedetails"),
     path('deletedetails/<int:Delid>/', views.deletedetails, name="deletedetails"),
+    path('adminlogin/', views.adminlogin, name="adminlogin"),
+    path('admin/', views.admin, name="admin"),
 
 ]
