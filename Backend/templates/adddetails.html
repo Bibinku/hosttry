@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <section>
+     <div class="container-fluid">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold mb-4">Add Occupancy Details</h5>
+              <div class="card">
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Name of occupancy </label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div><br>
+
+                     <div class="form-group">
+                      <label for="exampleInputEmail1" class="form-label"> Description </label>
+                      <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="Description" name="adescription"></textarea>
+                    </div><br>
+
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Price</label>
+                      <input type="number" class="form-control" id="exampleInputPassword1">
+                    </div><br>
+
+
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Advance</label>
+                      <input type="number" class="form-control" id="exampleInputPsword1">
+                    </div><br>
+
+                    <div class="form-group">
+
+                       <label for="exampleInputPassword1" class="form-label">Room Image 1</label>
+
+                      <input type="file" class="form-control" placeholder=" Image" name="aimage">
+                    </div><br><br>
+
+                    <div class="form-group">
+
+                       <label for="exampleInputPassword1" class="form-label">Room Image 2</label>
+
+                      <input type="file" class="form-control" placeholder=" Image" name="aimage">
+                    </div><br><br>
+
+
+                    <div class="form-group">
+
+                       <label for="exampleInputPassword1" class="form-label">Room Image 3</label>
+
+                      <input type="file" class="form-control" placeholder=" Image" name="aimage">
+                    </div><br><br>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+ </section>
+
+</body>
+</html>
+{% endblock %}
