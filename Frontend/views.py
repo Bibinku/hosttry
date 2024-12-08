@@ -9,3 +9,5 @@ def homepage(req):
     data = DetailsDB.objects.all()
     return render(req, "home.html",{'data':data})
 
+def roomspage(req):
+    return render(req,"Rooms.html")

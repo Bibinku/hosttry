@@ -85,7 +85,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-6 mt-lg-5 text-center">
-              <h1 class="text-shadow">Hai sweety</h1>
+              <h1 class="text-shadow">Step in to a bright way of living at hunasmaranhalli like never before</h1>
               <p class="mb-5 text-shadow">   </p>
               <p><a href="https://free-template.co" target="_blank" class="btn btn-primary px-5 py-3">Get Started</a></p>
 
@@ -102,9 +102,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-6 mt-lg-5 text-center">
-              <h1 class="text-shadow">Find Your Perfect Property For Your Home</h1>
-              <p class="mb-5 text-shadow">Free website template for Real Estate websites by the fine folks at <a href="https://free-template.co/" target="_blank">Free-Template.co</a>  </p>
-              <p><a href="https://free-template.co" target="_blank" class="btn btn-primary px-5 py-3">Get Started</a></p>
+              <h1 class="text-shadow">We assure you a best standard of living and food. </h1>
+              <p class="mb-5 text-shadow"></p>
 
             </div>
           </div>
@@ -116,15 +115,14 @@
 
   </div>
 
-
-  <div class="site-section" id="properties-section">
+      <div  style="text-align: center;" class="site-section" id="properties-section">
       <div class="container">
         <div class="row large-gutters">
           {% for i in data %}
          <div class="col-md-6 col-lg-4 mb-5 mb-lg-5 ">
             <div class="ftco-media-1">
              <div class="ftco-media-1-inner">
-                <a href="property-single.html" class="d-inline-block mb-4">
+                <a href="{% url 'roomspage' %}" class="d-inline-block mb-4">
                    <img src="/media/{{ i.roomimage1 }}"  class="img-fluid">
                 </a>
                <div class="ftco-media-details">
@@ -144,7 +142,7 @@
     </div>
 
 
-     <section class="site-section" id="about-section">
+   <section class="site-section" id="about-section">
       <div class="container">
 
         <div class="row large-gutters">
@@ -177,6 +175,9 @@
         </div>
       </div>
     </section>
+
+
+
 
 
 
