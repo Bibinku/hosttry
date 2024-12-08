@@ -85,7 +85,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-6 mt-lg-5 text-center">
-              <h1 class="text-shadow">Hai sweety</h1>
+              <h1 class="text-shadow">Step in to a bright way of living at hunasmaranhalli like never before</h1>
               <p class="mb-5 text-shadow">   </p>
               <p><a href="https://free-template.co" target="_blank" class="btn btn-primary px-5 py-3">Get Started</a></p>
 
@@ -102,9 +102,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-6 mt-lg-5 text-center">
-              <h1 class="text-shadow">Find Your Perfect Property For Your Home</h1>
-              <p class="mb-5 text-shadow">Free website template for Real Estate websites by the fine folks at <a href="https://free-template.co/" target="_blank">Free-Template.co</a>  </p>
-              <p><a href="https://free-template.co" target="_blank" class="btn btn-primary px-5 py-3">Get Started</a></p>
+              <h1 class="text-shadow">We assure you a best standard of living and food. </h1>
+              <p class="mb-5 text-shadow"></p>
 
             </div>
           </div>
@@ -114,37 +113,151 @@
       </div>
     </div>
 
-  </div>
-
-
-  <div class="site-section" id="properties-section">
-      <div class="container">
-        <div class="row large-gutters">
-          {% for i in data %}
-         <div class="col-md-6 col-lg-4 mb-5 mb-lg-5 ">
-            <div class="ftco-media-1">
-             <div class="ftco-media-1-inner">
-                <a href="property-single.html" class="d-inline-block mb-4">
-                   <img src="/media/{{ i.roomimage1 }}"  class="img-fluid">
-                </a>
-               <div class="ftco-media-details">
-               <h3>{{ i.name }}</h3>
-
-               <strong style="font-size: 25px ;font-family: Arial, Helvetica, sans-serif;">₹{{ i.price }}</strong>
-              </div>
-             </div>
-            </div>
-         </div>
-         {% endfor %}
+  </div><br><br>
 
 
 
+
+  <section class="all-inclusive-amenities-container">
+    <style>
+        .all-inclusive-amenities-container {
+            padding: 30px;
+            background-color: #ffffff; /* White background */
+            max-width: 1200px;
+            margin: 50px auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .all-inclusive-amenities-header {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .aia-tile-list {
+            display: flex;
+            gap: 20px;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space between tiles */
+            flex-wrap: wrap; /* Wrap to next line on smaller screens */
+        }
+
+        .aia-tile {
+            flex: 1 1 calc(16.66% - 20px); /* Each tile takes 1/6 of the row with space for gaps */
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Light gray gradient */
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .aia-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .aia-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #555; /* Darker color for the icon to stand out */
+        }
+
+        .aia-header {
+            font-size: 14px;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .aia-tile {
+                flex: 1 1 calc(33.33% - 20px); /* 3 items in a row on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .aia-tile {
+                flex: 1 1 calc(50% - 20px); /* 2 items per row on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .aia-tile {
+                flex: 1 1 100%; /* 1 item per row on extra small screens */
+            }
+        }
+    </style>
+
+    <h1 class="all-inclusive-amenities-header">All Inclusive Amenities</h1>
+
+    <div class="aia-tile-list">
+        <div class="aia-tile">
+            <div class="aia-icon">💧</div>
+            <div class="aia-header">Hot Water (24 HRS)</div>
         </div>
-      </div>
+        <div class="aia-tile">
+            <div class="aia-icon">🎥</div>
+            <div class="aia-header">CCTV</div>
+        </div>
+        <div class="aia-tile">
+            <div class="aia-icon">🛋️</div>
+            <div class="aia-header">IRON Box & Kettle</div>
+        </div>
+        <div class="aia-tile">
+            <div class="aia-icon">📺</div>
+            <div class="aia-header">TV</div>
+        </div>
+        <div class="aia-tile">
+            <div class="aia-icon">🧺</div>
+            <div class="aia-header">Washing Machine</div>
+        </div>
+        <div class="aia-tile">
+            <div class="aia-icon">🍳</div>
+            <div class="aia-header">Self Cooking Allowed</div>
+        </div>
     </div>
+</section>
+
+<div style="text-align: center;" class="site-section" id="properties-section">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="section-title">
+            <h2 style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">
+                Explore Our Beautiful Rooms
+            </h2>
+            <p style="font-size: 18px; color: #666; font-weight: 400; max-width: 600px; margin: 0 auto;">
+                Choose your perfect stay from our carefully curated collection of rooms designed for comfort and luxury.
+            </p>
+        </div><br><br>
+
+        <!-- Property Listings -->
+        <div class="row large-gutters">
+            {% for i in data %}
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="ftco-media-1">
+                    <div class="ftco-media-1-inner">
+                        <a href="{% url 'roomspage' %}" class="d-inline-block mb-4">
+                            <img src="/media/{{ i.roomimage1 }}" class="img-fluid">
+                        </a>
+                        <div class="ftco-media-details">
+                            <h3>{{ i.name }}</h3>
+                            <strong style="font-size: 25px; font-family: Arial, Helvetica, sans-serif;">₹{{ i.price }}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 
-     <section class="site-section" id="about-section">
+   <section class="site-section" id="about-section">
       <div class="container">
 
         <div class="row large-gutters">
@@ -159,24 +272,28 @@
           </div>
           <div class="col-lg-6 ml-auto">
 
-            <h2 class="section-title mb-3">Warehouse Real Estate Template</h2>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit  Quo suscipit omnis iste velit maxime.</p>
+            <h2 class="section-title mb-3" style="font-size: 36px; font-weight: bold; color: #333;">Why Kaarvi?</h2>
+                <p style="font-size: 18px; color: #666; font-weight: 400;">Step in to a bright way of living at hunasmaranhalli like never before. We assure you a best standard of living and food and our permium facilities are :</p>
 
                 <ul class="list-unstyled ul-check success">
-                  <li>Placeat maxime animi minus</li>
-                  <li>Dolore qui placeat maxime</li>
-                  <li>Consectetur adipisicing</li>
-                  <li>Lorem ipsum dolor</li>
-                  <li>Placeat molestias animi</li>
+                  <li>Laundry Facility</li>
+                  <li>Regular Maintenance </li>
+                  <li>24/7 Hot Water</li>
+                  <li>CCTV</li>
+                  <li>TV Access</li>
+                  <li>Self-Cooking Allowed</li>
+                  <li>Tasty Food (Includes Biryani & Egg twice a week.)</li>
                 </ul>
 
-                <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
+
 
           </div>
         </div>
       </div>
     </section>
+
+
+
 
 
 
