@@ -6,8 +6,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modernize Free</title>
-  <link rel="shortcut icon" type="image/png" href="{% static '/assets/images/logos/favicon.png' %}" />
+  <title>KAARVI ENTERPRISES LLP</title>
+  <link rel="shortcut icon" type="image/png" href="{% static '/assets/images/logos/KAARVIR.jpg' %}" />
   <link rel="stylesheet" href="{% static '/assets/css/styles.min.css' %}" />
 </head>
 
@@ -20,8 +20,8 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
-            <img src="{% static '/assets/images/logos/KAARVI.jpg' %}" width="180" alt="" />
+          <a href="{% url 'indexpage' %}" class="text-nowrap logo-img">
+            <img src="{% static '/assets/images/logos/KAARVIedited.jpg' %}" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>
@@ -35,7 +35,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="{% url 'indexpage' %}" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -44,12 +44,12 @@
             </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">UI COMPONENTS</span>
+              <span class="hide-menu">Housing Information</span>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link" href="{% url 'detailspage' %}" aria-expanded="false">
                 <span>
-                  <i class="ti ti-article"></i>
+                  <i class="ti ti-alert-circle"></i>
                 </span>
                 <span class="hide-menu">Add Details</span>
               </a>
@@ -65,7 +65,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
                 <span>
-                  <i class="ti ti-cards"></i>
+                  <i class="ti ti-alert-circle"></i>
                 </span>
                 <span class="hide-menu">Display Orders </span>
               </a>
@@ -550,6 +550,29 @@
   <script src="{% static '/assets/libs/apexcharts/dist/apexcharts.min.js' %}"></script>
   <script src="{% static '/assets/libs/simplebar/dist/simplebar.js' %}"></script>
   <script src="{% static '/assets/js/dashboard.js' %}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   {% if messages %}
+     {% for i in messages %}
+         {% if i.tags == 'warning'%}
+              <script>
+                  swal('{{i}}','','warning');
+              </script>
+         {% elif i.tags == 'error'%}
+              <script>
+                  swal('{{i}}','','error');
+              </script>
+         {% elif i.tags == 'info'%}
+              <script>
+                  swal('{{i}}','','info');
+              </script>
+         {% else %}
+               <script>
+                  swal('{{i}}','','success');
+              </script>
+         {% endif %}
+     {% endfor %}
+   {% endif %}
+
 </body>
 
 </html>

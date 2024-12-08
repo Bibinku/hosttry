@@ -33,7 +33,9 @@ def savedetails(req):
         img3 = req.FILES['roomimage3']
         obj = DetailsDB(name=a, description=b, price=c, advprice=d, roomimage1=img1, roomimage2=img2, roomimage3=img3)
         obj.save()
-        return redirect(indexpage)
+        messages.success(req, "Details Add Successfully")
+
+        return redirect(displaydetails)
 
 
 # to display details
@@ -73,12 +75,15 @@ def updatedetails(req,Uid):
             file3=DetailsDB.objects.get(id=Uid).roomimage3
 
     DetailsDB.objects.filter(id=Uid).update(name=a, description=b, price=c, advprice=d, roomimage1=file1 ,roomimage2=file2 ,roomimage3=file3)
+    messages.success(req, "Details Updated Successfully")
+
     return redirect(displaydetails)
 
 
 def deletedetails(req,Delid):
     data=DetailsDB.objects.filter(id=Delid)
     data.delete()
+    messages.warning(req, "Details Deleted Successfully")
     return redirect(displaydetails)
 
 def adminlogin(req):
