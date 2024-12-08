@@ -12,5 +12,6 @@ urlpatterns = [
     path('deletedetails/<int:Delid>/', views.deletedetails, name="deletedetails"),
     path('adminlogin/', views.adminlogin, name="adminlogin"),
     path('admin/', views.admin, name="admin"),
+    path('adminlogout/', views.adminlogout, name="adminlogout"),
 
 ]

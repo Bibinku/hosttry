@@ -1,58 +1,71 @@
 
-<!doctype html>
+<!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modernize Free</title>
-  <link rel="shortcut icon" type="image/png" href="{% static '/assets/images/logos/favicon.png' %}" />
-  <link rel="stylesheet" href="{% static '/assets/css/styles.min.css' %}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'Login/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'Login/css/style.css' %}">
 </head>
-
 <body>
-  <!--  Body Wrapper -->
-  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-    data-sidebar-position="fixed" data-header-position="fixed">
-    <div
-      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
-      <div class="d-flex align-items-center justify-content-center w-100">
-        <div class="row justify-content-center w-100">
-          <div class="col-md-8 col-lg-6 col-xxl-3">
-            <div class="card mb-0">
-              <div class="card-body">
-                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="{% static '/assets/images/logos/KAARVI.jpg' %}" width="180" alt="">
-                </a>
-<!--                <p class="text-center">Your Social Campaigns</p>-->
-                <form class="login100-form validate-form" method="post" action="{% url 'admin' %}">
-					{% csrf_token %}
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" data-validate = "Username is reauired" >Username</label>
-                    <input type="email" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPassword1" class="form-label">Password</label><br>
-                    <input type="password" class="form-control" name="pass" id="exampleInputPassword1">
-                  </div>
-                  <a href="" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a>
-                  <div class="d-flex align-items-center justify-content-center">
 
-                    <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an account</a>
-                  </div>
-                </form>
-              </div>
+
+    <div class="main">
+
+
+        <section class="sign-in">
+            <div class="container">
+                <form method="post" action="{% url 'admin' %}" enctype="multipart/form-data"   onsubmit="return validation()">
+                 {% csrf_token %}
+
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="{% static 'Login/images/KAARVI.jpg' %}" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">Create an account</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Log in</h2>
+                        <form method="POST" class="register-form" id="login-form">
+                            <div class="form-group" data-validate = "Username is reauired">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="username" id="your_name" placeholder="Username"/>
+                            </div>
+                            <div class="form-group" data-validate="Password is required">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="your_pass" placeholder="Password" />
+                            </div>
+<!--                            -->
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="{% static '/assets/libs/jquery/dist/jquery.min.js' %}"></script>
-  <script src="{% static '/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+        </section>
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Sign up form -->
+
+        <!-- Sing in  Form -->
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'Login/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'Login/js/main.js' %}"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    {% if messages %}
      {% for i in messages %}
          {% if i.tags == 'warning'%}
@@ -74,6 +87,12 @@
          {% endif %}
      {% endfor %}
    {% endif %}
-</body>
 
+
+
+
+
+
+
+</body>
 </html>

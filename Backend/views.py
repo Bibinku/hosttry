@@ -102,3 +102,9 @@ def admin(request):
         else:
             messages.warning(request,"Please check before enter ")
             return redirect(adminlogin)
+
+def adminlogout(req):
+    del req.session['username']
+    del req.session['password']
+    messages.success(req,"Logout Successfully")
+    return redirect(adminlogin)
