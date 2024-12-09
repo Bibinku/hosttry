@@ -113,7 +113,31 @@
       </div>
     </div>
 
+<<<<<<< HEAD
   </div><br><br>
+=======
+  </div>
+
+      <div  style="text-align: center;" class="site-section" id="properties-section">
+      <div class="container">
+        <div class="row large-gutters">
+          {% for i in data %}
+         <div class="col-md-6 col-lg-4 mb-5 mb-lg-5 ">
+            <div class="ftco-media-1">
+             <div class="ftco-media-1-inner">
+                <a href="{% url 'roomspage' %}" class="d-inline-block mb-4">
+                   <img src="/media/{{ i.roomimage1 }}"  class="img-fluid">
+                </a>
+               <div class="ftco-media-details">
+               <h3>{{ i.name }}</h3>
+
+               <strong style="font-size: 25px ;font-family: Arial, Helvetica, sans-serif;">₹{{ i.price }}</strong>
+              </div>
+             </div>
+            </div>
+         </div>
+         {% endfor %}
+>>>>>>> origin/main
 
 
 
