@@ -60,11 +60,11 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#properties-section" class="nav-link">Properties</a></li>
-                <li><a href="#about-section" class="nav-link">About</a></li>
-                <li><a href="#news-section" class="nav-link">News</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                <li><a href="{% url 'homepage' %}" class="nav-link">Home</a></li>
+                <li><a href="{% url 'homepage' %}" class="nav-link">Rooms</a></li>
+                <li><a href="{% url 'homepage' %}" class="nav-link">About</a></li>
+
+                <li><a href="{% url 'homepage' %}" class="nav-link">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -148,10 +148,10 @@
               <div class="col-md-3 mx-auto">
                 <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#home-section">About Us</a></li>
+                  <li><a href="#home-section">Services</a></li>
+                  <li><a href="#home-section">Testimonials</a></li>
+                  <li><a href="#home-section">Contact Us</a></li>
                 </ul>
               </div>
 
@@ -181,15 +181,7 @@
 
           </div>
         </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-            <!-- Link back to Free-Template.co can't be removed. Template is licensed under CC BY 3.0. -->
-            <p class="copyright"><small>&copy; <script>document.write(new Date().getFullYear());</script> Warehouse. All Rights Reserved.  Design by <a href="https://free-template.co" target="_blank">Free-Template.co</a></small></p>
-            </div>
-          </div>
 
-        </div>
       </div>
     </footer>
 
