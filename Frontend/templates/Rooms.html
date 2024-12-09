@@ -96,17 +96,18 @@
 
     <div class="site-section" id="property-details">
       <div class="container">
+
         <div class="row">
           <div class="col-lg-7">
             <div class="owl-carousel slide-one-item with-dots">
-              <div><img src="{% static '/frontend/images/property_1.jpg' %}" alt="Image" class="img-fluid"></div>
-              <div><img src="{% static '/frontend/images/property_2.jpg' %}" alt="Image" class="img-fluid"></div>
-              <div><img src="{% static '/frontend/images/property_3.jpg' %}" alt="Image" class="img-fluid"></div>
+              <div><img src="{{cata.roomimage1.url}}" alt="Image" class="img-fluid"></div>
+              <div><img src="{{cata.roomimage2.url}}" alt="Image" class="img-fluid"></div>
+              <div><img src="{{cata.roomimage3.url}}" alt="Image" class="img-fluid"></div>
             </div>
           </div>
           <div class="col-lg-5 pl-lg-5 ml-auto">
             <div class="text">
-             <h2>Property Information</h2>
+             <h2>{{cata.name}}</h2>
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quae obcaecati doloribus distinctio, aliquam vero? Molestias, amet, eveniet.</p>
                <ul class="property-list-details mb-5 ">
                  <li class="text-black">Property Name: <strong class="text-black">Marga Luxury Suite</strong></li>
