@@ -6,4 +6,5 @@ urlpatterns = [
     path('roomspage/<int:Aid>/', views.roomspage, name="roomspage"),
     path('contactpage/', views.contactpage, name="contactpage"),
     path('savecontact/', views.savecontact, name="savecontact"),
+    path('savehomecontact/', views.savehomecontact, name="savehomecontact"),
 ]

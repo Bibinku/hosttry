@@ -29,3 +29,13 @@ def savecontact(req):
 
         return redirect(homepage)
 
+def savehomecontact(req):
+    if req.method == "POST":
+        a = req.POST.get('name')
+        b = req.POST.get('email')
+        c = req.POST.get('number')
+        obj = ContactDB(name=a, email=b, number=c,)
+        obj.save()
+
+
+        return redirect(homepage)
