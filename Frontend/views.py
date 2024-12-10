@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from Backend.models import DetailsDB
 from Frontend.models import ContactDB
+from django.contrib import messages
 
 
 
@@ -25,6 +26,7 @@ def savecontact(req):
         c = req.POST.get('number')
         obj = ContactDB(name=a, email=b, number=c,)
         obj.save()
+        messages.success(req, "Thanks for Contacting Us ")
 
 
         return redirect(homepage)
@@ -36,6 +38,7 @@ def savehomecontact(req):
         c = req.POST.get('number')
         obj = ContactDB(name=a, email=b, number=c,)
         obj.save()
+        messages.success(req, "Thanks for Contacting Us ")
 
 
         return redirect(homepage)
