@@ -13,3 +13,6 @@ def roomspage(req,Aid):
     data = DetailsDB.objects.all()
     cata = DetailsDB.objects.get(id=Aid)
     return render(req,"Rooms.html",{'data':data,'cata':cata})
+
+def contactpage(req):
+    return render(req,"contact.html")
