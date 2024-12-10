@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from Backend.models import DetailsDB
+from Frontend.models import ContactDB
 
 
 
@@ -16,3 +17,15 @@ def roomspage(req,Aid):
 
 def contactpage(req):
     return render(req,"contact.html")
+
+def savecontact(req):
+    if req.method == "POST":
+        a = req.POST.get('name')
+        b = req.POST.get('email')
+        c = req.POST.get('number')
+        obj = ContactDB(name=a, email=b, number=c,)
+        obj.save()
+
+
+        return redirect(homepage)
+
