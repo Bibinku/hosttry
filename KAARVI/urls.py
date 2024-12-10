@@ -24,7 +24,7 @@ from KAARVI import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Backend/',include(Backend.urls)),
-    path('Kaarvi/',include(Frontend.urls))
+    path('',include(Frontend.urls))
 ]
 urlpatterns+=staticfiles_urlpatterns()
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
