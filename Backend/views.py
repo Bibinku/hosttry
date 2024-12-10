@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from Backend.models import DetailsDB
+from Frontend.models import ContactDB
 from django.core.files.storage import FileSystemStorage
 from django.utils.datastructures import MultiValueDictKeyError
 from django.contrib.auth.models import User
@@ -113,3 +114,13 @@ def adminlogout(req):
     del req.session['password']
     messages.success(req, "Logout Successfully")
     return redirect(adminlogin)
+
+def displaycontact(req):
+    cata = ContactDB.objects.all()
+    return render(req, "displaycontact.html", {'cata': cata})
+
+def deletecontact(req, Cid):
+    cata = ContactDB.objects.filter(id=Cid)
+    cata.delete()
+    messages.warning(req, "Details Deleted Successfully")
+    return redirect(displaycontact)

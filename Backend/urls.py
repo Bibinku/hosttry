@@ -13,5 +13,7 @@ urlpatterns = [
     path('adminlogin/', views.adminlogin, name="adminlogin"),
     path('admin/', views.admin, name="admin"),
     path('adminlogout/', views.adminlogout, name="adminlogout"),
+    path('displaycontact/', views.displaycontact, name="displaycontact"),
+    path('deletecontact/<int:Cid>/', views.deletecontact, name="deletecontact"),
 
 ]
