@@ -82,8 +82,7 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-5 mx-auto mt-lg-5 text-center">
-            <h1>HD17 19 Utica Ave, New York, USA</h1>
-            <p class="mb-5"><strong class="text-white">$2,000,000</strong></p>
+            <h1>Choose the Room that fits your Lifestyle</h1>
 
           </div>
         </div>
@@ -108,14 +107,32 @@
        <div class="col-lg-5 pl-lg-5 ml-auto">
     <div class="text" style="color: black;">
         <h2 style="color: black;">{{ cata.name }}</h2>
-        <p class="mb-5" style="color: black;">
+        <p class="mb-5" style="color: black; padding-top: 10px;">
             {{ cata.description }}
         </p>
-        <ul class="property-list-details mb-5" style="list-style: none; padding: 0; color: black; margin: 0; font-family: Arial, Helvetica, sans-serif; font-weight: 500;">
-            <li style="color: black; margin-bottom: 10px;">
-                <span style="display: inline-block; width: 150px;">Occupancy Name:</span>
+        <ul class="list-unstyled ul-check success" style="padding-top: -20px;" >
+                  <li>Laundry Facility</li>
+                  <li>Regular Maintenance </li>
+                  <li>24/7 Hot Water</li>
+                  <li>CCTV</li>
+                  <li>TV Access</li>
+                  <li>Self-Cooking Allowed</li>
+                  <li>Tasty Food (Includes Biryani & Egg twice a week.)</li>
+                </ul>
+
+
+
+        <ul class="property-list-details mb-5" style="list-style: none; padding-top: 20px; padding: 0; color: black; margin: 0; font-family: Arial, Helvetica, sans-serif; font-weight: 500;">
+            <li style="color: black; margin-bottom: 10px; ">
+                <span style="display: inline-block; width: 150px;">Occupancy Details:</span>
                 <strong style="color: black; font-weight: 550;">{{ cata.name }}</strong>
+
             </li>
+
+
+
+
+
             <li style="color: black; margin-bottom: 10px;">
                 <span style="display: inline-block; width: 150px;">Price:</span>
                 <strong style="color: black; font-weight: 550;">₹{{ cata.price }}/Month</strong>
@@ -124,21 +141,16 @@
                 <span style="display: inline-block; width: 150px;">Advance Price:</span>
                 <strong style="color: black; font-weight: 550;">₹{{ cata.advprice }}</strong>
             </li>
-        </ul><br><br>
+        </ul>
 
-        <!-- Input Fields Section -->
-      <section style="background: #fff; padding: 20px; border-radius: 8px; width: 400px; text-align: center; display: flex; flex-direction: column; gap: 15px; margin-left: -20px; ">
-  <h3 style="margin: 0 0 20px 0; font-size: 25px; color: #333; margin-left: -210px; ">Request a Call</h3>
-  <input type="text" placeholder="Name" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 100%; box-sizing: border-box;">
-  <input type="email" placeholder="Email" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 100%; box-sizing: border-box;">
-  <div style="display: flex; gap: 10px; width: 100%; box-sizing: border-box;">
-    <span style="flex: 0 0 60px; padding: 10px; background: #e9ecef; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; text-align: center;">+91</span>
-    <input type="tel" placeholder="Number" required style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box;">
-  </div>
-  <button type="submit" style="; padding: 12px; border: none; border-radius: 4px; font-size: 14px; cursor: pointer; font-weight: bold; width: 100%; " class="btn btn-primary btn-md text-white">REQUEST A CALL</button>
-</section>
-    </div>
-</div>
+        <div>
+             <button type="submit" style="; padding: 12px; border: none; border-radius: 4px; font-size: 14px; cursor: pointer; font-weight: bold; width: 100%; " class="btn btn-primary btn-md text-white">Contact Us</button>
+        </div>
+
+
+
+              </div>
+           </div>
         </div>
       </div>
     </div>
