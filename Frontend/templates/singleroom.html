@@ -75,8 +75,8 @@
 
     </header>
 
+   <div class="site-blocks-cover overlay" style="background-image: url('{% static 'frontend/images/bg.jpg' %}');" data-aos="fade" id="home-section">
 
-<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('{% static 'frontend/images/bg.jpg' %}');" data-aos="fade">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-5 mx-auto mt-lg-5 text-center">
@@ -90,15 +90,15 @@
 
         <div class="row">
           <div class="col-lg-7">
-            <div class="owl-carousel slide-one-item with-dots">
+            <div class="owl-carousel slide-one-item with-dots" >
               <div><img src="{{cata.roomimage1.url}}" alt="Image" class="img-fluid"></div>
               <div><img src="{{cata.roomimage2.url}}" alt="Image" class="img-fluid"></div>
               <div><img src="{{cata.roomimage3.url}}" alt="Image" class="img-fluid"></div>
             </div>
           </div>
        <div class="col-lg-5 pl-lg-5 ml-auto">
-    <div class="text" style="color: black;">
-        <h2 style="color: black;">{{ cata.name }}</h2>
+    <div class="text" style="color: black;"><br><br><br>
+        <h2 style="color: black;">{{ cata.name }}</h2><br>
         <p class="mb-5" style="color: black; padding-top: 10px;">
             {{ cata.description }}
         </p>
