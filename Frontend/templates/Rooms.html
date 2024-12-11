@@ -54,20 +54,18 @@
       <div class="container">
         <div class="row align-items-center">
 
-          <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo m-0 p-0"><a href="index.html" class="mb-0">Warehouse</a></h1>
+          <div class="col-6 col-xl-2"  >
+            <h1 class="mb-0 site-logo m-0 p-0"><a href="index.html" class="mb-0">KAARVI ENTERPRISES </a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="index.html#home-section" class="nav-link">Home</a></li>
-                <li><a href="index.html#properties-section" class="nav-link ">Properties</a></li>
-                <li><a href="index.html#agents-section" class="nav-link">Agents</a></li>
-                <li><a href="index.html#about-section" class="nav-link">About</a></li>
-                <li><a href="index.html#news-section" class="nav-link active">News</a></li>
-                <li><a href="index.html#contact-section" class="nav-link">Contact</a></li>
+                <li><a href="{% url 'homepage' %}" class="nav-link">Home</a></li>
+                <li><a href="{% url 'roomspage' %}" class="nav-link">Rooms</a></li>
+                <li><a href="{% url 'aboutpage' %}" class="nav-link">About</a></li>
+                <li><a href="{% url 'contactpage' %}" class="nav-link">Contact</a></li>
               </ul>
             </nav>
           </div>
