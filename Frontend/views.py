@@ -42,3 +42,9 @@ def savehomecontact(req):
 
 
         return redirect(homepage)
+
+def singleroom(req,Rid):
+    data = DetailsDB.objects.all()
+    cata = DetailsDB.objects.get(id=Rid)
+    return render(req,"singleroom.html",{'data':data,'cata':cata})
+
