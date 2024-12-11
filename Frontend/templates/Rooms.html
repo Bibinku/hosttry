@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -52,19 +54,20 @@
       <div class="container">
         <div class="row align-items-center">
 
-          <div class="col-6 col-xl-2"  >
-            <h1 class="mb-0 site-logo m-0 p-0"><a href="index.html" class="mb-0">KAARVI ENTERPRISES </a></h1>
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo m-0 p-0"><a href="index.html" class="mb-0">Warehouse</a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="{% url 'homepage' %}" class="nav-link">Home</a></li>
-                <li><a href="{% url 'homepage' %}" class="nav-link">Rooms</a></li>
-                <li><a href="{% url 'homepage' %}" class="nav-link">About</a></li>
-
-                <li><a href="{% url 'homepage' %}" class="nav-link">Contact</a></li>
+                <li><a href="index.html#home-section" class="nav-link">Home</a></li>
+                <li><a href="index.html#properties-section" class="nav-link ">Properties</a></li>
+                <li><a href="index.html#agents-section" class="nav-link">Agents</a></li>
+                <li><a href="index.html#about-section" class="nav-link">About</a></li>
+                <li><a href="index.html#news-section" class="nav-link active">News</a></li>
+                <li><a href="index.html#contact-section" class="nav-link">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -78,85 +81,54 @@
     </header>
 
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('{% static 'frontend/images/bg.jpg' %}');" data-aos="fade">
+    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-md-5 mx-auto mt-lg-5 text-center">
-            <h1>Choose the Room that fits your Lifestyle</h1>
-
-          </div>
-        </div>
-      </div>
-
-      <a href="#property-details" class="smoothscroll arrow-down"><span class="icon-arrow_downward"></span></a>
-    </div>
 
 
-
-    <div class="site-section" id="property-details">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="owl-carousel slide-one-item with-dots">
-              <div><img src="{{cata.roomimage1.url}}" alt="Image" class="img-fluid"></div>
-              <div><img src="{{cata.roomimage2.url}}" alt="Image" class="img-fluid"></div>
-              <div><img src="{{cata.roomimage3.url}}" alt="Image" class="img-fluid"></div>
-            </div>
-          </div>
-       <div class="col-lg-5 pl-lg-5 ml-auto">
-    <div class="text" style="color: black;">
-        <h2 style="color: black;">{{ cata.name }}</h2>
-        <p class="mb-5" style="color: black; padding-top: 10px;">
-            {{ cata.description }}
-        </p>
-        <ul class="list-unstyled ul-check success" style="padding-top: -20px;" >
-                  <li>Laundry Facility</li>
-                  <li>Regular Maintenance </li>
-                  <li>24/7 Hot Water</li>
-                  <li>CCTV</li>
-                  <li>TV Access</li>
-                  <li>Self-Cooking Allowed</li>
-                  <li>Tasty Food (Includes Biryani & Egg twice a week.)</li>
-                </ul>
-
-
-
-        <ul class="property-list-details mb-5" style="list-style: none; padding-top: 20px; padding: 0; color: black; margin: 0; font-family: Arial, Helvetica, sans-serif; font-weight: 500;">
-            <li style="color: black; margin-bottom: 10px; ">
-                <span style="display: inline-block; width: 150px;">Occupancy Details:</span>
-                <strong style="color: black; font-weight: 550;">{{ cata.name }}</strong>
-
-            </li>
-
-
-
-
-
-            <li style="color: black; margin-bottom: 10px;">
-                <span style="display: inline-block; width: 150px;">Price:</span>
-                <strong style="color: black; font-weight: 550;">₹{{ cata.price }}/Month</strong>
-            </li>
-            <li style="color: black; margin-bottom: 10px;">
-                <span style="display: inline-block; width: 150px;">Advance Price:</span>
-                <strong style="color: black; font-weight: 550;">₹{{ cata.advprice }}</strong>
-            </li>
-        </ul>
-
-        <div>
-            <a href="{% url 'contactpage' %}" style="display: inline-block; padding: 12px; border: none; border-radius: 4px; font-size: 14px; cursor: pointer; font-weight: bold; width: 100%; text-align: center; text-decoration: none;" class="btn btn-primary btn-md text-white">Contact Us</a>
-        </div>
-
-
+              <div class="col-md-12 mt-lg-5 text-center">
+                <h1>Single Blog Posts</h1>
+                <p class="post-meta">May 29, 2019 &bull; Posted by <a href="#">Joh Doe</a> in <a href="#">Events</a></p>
 
               </div>
-           </div>
+
         </div>
       </div>
     </div>
 
 
+    <div style="text-align: center;" class="site-section" id="properties-section">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="section-title">
+            <h2 style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">
+                Explore Your Dream Stay
+            </h2>
+            <p style="font-size: 18px; color: #666; font-weight: 400; max-width: 600px; margin: 0 auto;">
+                Discover your perfect getaway with our stylish rooms, designed for comfort, relaxation, and unforgettable experiences.
+            </p>
+        </div><br><br>
 
+        <!-- Room Listings -->
+        <div class="row large-gutters">
+            {% for i in data %}
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="ftco-media-1">
+                    <div class="ftco-media-1-inner">
+                        <a href="{% url 'roomspage'  %}" class="d-inline-block mb-4">
+                            <img src="/media/{{ i.roomimage1 }}" class="img-fluid">
+                        </a>
+                        <div class="ftco-media-details">
+                            <h3>{{ i.name }}</h3>
+                            <strong style="font-size: 25px; font-family: Arial, Helvetica, sans-serif;">₹{{ i.price }} / Month</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 
 
@@ -173,10 +145,10 @@
               <div class="col-md-3 mx-auto">
                 <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#home-section">About Us</a></li>
-                  <li><a href="#home-section">Services</a></li>
-                  <li><a href="#home-section">Testimonials</a></li>
-                  <li><a href="#home-section">Contact Us</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Contact Us</a></li>
                 </ul>
               </div>
 
@@ -206,7 +178,15 @@
 
           </div>
         </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+            <!-- Link back to Free-Template.co can't be removed. Template is licensed under CC BY 3.0. -->
+            <p class="copyright"><small>&copy; <script>document.write(new Date().getFullYear());</script> Warehouse. All Rights Reserved.  Design by <a href="https://free-template.co" target="_blank">Free-Template.co</a></small></p>
+            </div>
+          </div>
 
+        </div>
       </div>
     </footer>
 
@@ -214,7 +194,7 @@
 
   <a href="#top" class="gototop"><span class="icon-angle-double-up"></span></a>
 
-  <script src="{% static '/frontend/js/jquery-3.3.1.min.js' %}"></script>
+   <script src="{% static '/frontend/js/jquery-3.3.1.min.js' %}"></script>
   <script src="{% static '/frontend/js/jquery-ui.js' %}"></script>
   <script src="{% static '/frontend/js/popper.min.js' %}"></script>
   <script src="{% static '/frontend/js/bootstrap.min.js' %}"></script>

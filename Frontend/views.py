@@ -11,10 +11,10 @@ def homepage(req):
     data = DetailsDB.objects.all()
     return render(req, "home.html",{'data':data})
 
-def roomspage(req,Aid):
+def roomspage(req,):
     data = DetailsDB.objects.all()
-    cata = DetailsDB.objects.get(id=Aid)
-    return render(req,"Rooms.html",{'data':data,'cata':cata})
+
+    return render(req,"Rooms.html",{'data':data})
 
 def contactpage(req):
     return render(req,"contact.html")
