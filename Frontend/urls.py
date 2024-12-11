@@ -8,4 +8,5 @@ urlpatterns = [
     path('savecontact/', views.savecontact, name="savecontact"),
     path('savehomecontact/', views.savehomecontact, name="savehomecontact"),
     path('singleroom/<int:Rid>/', views.singleroom, name="singleroom"),
+    path('aboutpage/', views.aboutpage, name="aboutpage"),
 ]

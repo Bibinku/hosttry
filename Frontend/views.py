@@ -19,6 +19,11 @@ def roomspage(req,):
 def contactpage(req):
     return render(req,"contact.html")
 
+def aboutpage(req):
+    return render(req,"aboutpage.html")
+
+
+
 def savecontact(req):
     if req.method == "POST":
         a = req.POST.get('name')
