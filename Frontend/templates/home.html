@@ -127,6 +127,9 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
             border-radius: 15px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .all-inclusive-amenities-header {
@@ -139,9 +142,9 @@
         .aia-tile-list {
             display: flex;
             gap: 20px;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
+            width: 100%;
         }
 
         .aia-tile {
@@ -152,6 +155,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 200px; /* Limit the size of each tile */
         }
 
         .aia-tile:hover {
@@ -194,34 +198,33 @@
     <h1 class="all-inclusive-amenities-header">All Inclusive Amenities</h1>
 
     <div class="aia-tile-list">
-
-         <div class="aia-tile">
+        <div class="aia-tile">
             <img src="{% static '/frontend/icons/cctv.png' %}" alt="CCTV" class="aia-icon" />
             <div class="aia-header">CCTV Surveillance</div>
         </div>
-         <div class="aia-tile">
+        <div class="aia-tile">
             <img src="{% static '/frontend/icons/washing-machine.png' %}" alt="Washing Machine" class="aia-icon" />
             <div class="aia-header">Laundry Facility</div>
         </div>
-         <div class="aia-tile">
+        <div class="aia-tile">
             <img src="{% static '/frontend/icons/hot.png' %}" alt="Hot Water" class="aia-icon" />
             <div class="aia-header">24/7 Hot Water</div>
         </div>
-         <div class="aia-tile">
+        <div class="aia-tile">
             <img src="{% static '/frontend/icons/TV.png' %}" alt="TV" class="aia-icon" />
             <div class="aia-header">Entertainment Hub</div>
         </div>
-         <div class="aia-tile">
+        <div class="aia-tile">
             <img src="{% static '/frontend/icons/electric-kettle.png' %}" alt="Iron Box & Kettle" class="aia-icon" />
-            <div class="aia-header">Iron Box& Kettle</div>
+            <div class="aia-header">Iron Box & Kettle</div>
         </div>
-         <div class="aia-tile">
+        <div class="aia-tile">
             <img src="{% static '/frontend/icons/self cooking .png' %}" alt="Self Cooking" class="aia-icon" />
             <div class="aia-header">Self Cooking</div>
         </div>
     </div>
 </section>
-
+      
 
 <div style="text-align: center;" class="site-section" id="properties-section">
     <div class="container">
