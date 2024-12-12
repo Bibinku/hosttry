@@ -32,14 +32,26 @@
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
+              <span class="hide-menu">HomePage</span>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link" href="{% url 'homepage' %}" aria-expanded="false">
                 <span>
-                  <i class="ti ti-layout-dashboard"></i>
+                  <img src="{% static '/assets/icons/Home.png' %}" alt="Icon" style="width:20px; height:20px; vertical-align:middle;">
                 </span>
                 <span class="hide-menu">Home</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Contact Information</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{% url 'displaycontact' %}" aria-expanded="false">
+                <span>
+                  <img src="{% static '/assets/icons/view1.png' %}" alt="Icon" style="width:20px; height:20px; vertical-align:middle;">
+                </span>
+                <span class="hide-menu">View  Contacts  </span>
               </a>
             </li>
             <li class="nav-small-cap">
@@ -49,27 +61,22 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="{% url 'detailspage' %}" aria-expanded="false">
                 <span>
-                  <i class="ti ti-alert-circle"></i>
+                  <img src="{% static '/assets/icons/Add1.png' %}" alt="Icon" style="width:20px; height:20px; vertical-align:middle;">
                 </span>
-                <span class="hide-menu">Add Details</span>
-              </a>
-            </li>
-            <li class="sidebar-item" >
-              <a class="sidebar-link" href="{% url 'displaydetails' %}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                <span class="hide-menu">Display Details</span>
+                <span class="hide-menu">Add Occupancy</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{% url 'displaycontact' %}" aria-expanded="false">
+              <a class="sidebar-link" href="{% url 'displaydetails' %}" aria-expanded="false">
                 <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                <span class="hide-menu">Display Orders </span>
-              </a>
+             <img src="{% static '/assets/icons/view1.png' %}" alt="Icon" style="width:20px; height:20px; vertical-align:middle;">
+             </span>
+               <span class="hide-menu">View Occupancy</span>
+                </a>
             </li>
+
+
+
 <!--            <li class="sidebar-item">-->
 <!--              <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">-->
 <!--                <span>-->
