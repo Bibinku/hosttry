@@ -12,8 +12,8 @@
               <h5 class="card-title fw-semibold mb-4">Occupancy Details</h5>
               <div class="card">
                 <div class="card-body">
-                  <form method="post" action="{% url 'updatedetails' Uid=data.id %}">
-                       {% csrf_token %}
+                  <form class="forms-sample"  method="post" action="{% url 'updatedetails' Uid=data.id %}" enctype="multipart/form-data">
+                      {% csrf_token %}
 
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Name of occupancy </label>

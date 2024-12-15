@@ -53,11 +53,20 @@ def editdetails(req, Did):
 
 def updatedetails(req, Uid):
     if req.method == "POST":
+        # Retrieve data from POST request
         a = req.POST.get('name')
         b = req.POST.get('description')
         c = req.POST.get('price')
         d = req.POST.get('advprice')
 
+        # Retrieve the existing details for the given Uid
+        try:
+            details = DetailsDB.objects.get(id=Uid)
+        except DetailsDB.DoesNotExist:
+            messages.error(req, "Details not found!")
+            return redirect(displaydetails)
+
+        # Handle file uploads
         try:
             img1 = req.FILES['roomimage1']
             img2 = req.FILES['roomimage2']
@@ -67,15 +76,24 @@ def updatedetails(req, Uid):
             file2 = fs.save(img2.name, img2)
             file3 = fs.save(img3.name, img3)
         except MultiValueDictKeyError:
-            file1 = DetailsDB.objects.get(id=Uid).roomimage1
-            file2 = DetailsDB.objects.get(id=Uid).roomimage2
-            file3 = DetailsDB.objects.get(id=Uid).roomimage3
+            file1 = details.roomimage1
+            file2 = details.roomimage2
+            file3 = details.roomimage3
 
-    DetailsDB.objects.filter(id=Uid).update(name=a, description=b, price=c, advprice=d, roomimage1=file1,
-                                            roomimage2=file2, roomimage3=file3)
-    messages.success(req, "Details Updated Successfully")
+        # Update the database record
+        DetailsDB.objects.filter(id=Uid).update(
+            name=a,
+            description=b,
+            price=c,
+            advprice=d,
+            roomimage1=file1,
+            roomimage2=file2,
+            roomimage3=file3
+        )
 
-    return redirect(displaydetails)
+        messages.success(req, "Details Updated Successfully")
+        return redirect(displaydetails)
+
 
 
 def deletedetails(req, Delid):
