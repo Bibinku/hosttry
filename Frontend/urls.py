@@ -9,4 +9,5 @@ urlpatterns = [
     path('savehomecontact/', views.savehomecontact, name="savehomecontact"),
     path('singleroom/<int:Rid>/', views.singleroom, name="singleroom"),
     path('aboutpage/', views.aboutpage, name="aboutpage"),
+    path('ourservices/', views.ourservices, name="ourservices"),
 ]

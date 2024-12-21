@@ -53,3 +53,5 @@ def singleroom(req,Rid):
     cata = DetailsDB.objects.get(id=Rid)
     return render(req,"singleroom.html",{'data':data,'cata':cata})
 
+def ourservices(req):
+    return render(req,"ourservices.html")
