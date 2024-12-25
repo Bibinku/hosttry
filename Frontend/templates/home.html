@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
   <head>
-    <title>KAARVI ENTERPRISES LLP</title>
+    <title>Kaarvi Enterprises</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -342,37 +342,43 @@
 
 
     <section class="site-section bg-light" id="services-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3" style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;" >Services</h2>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-3" style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">Services</h2><br>
+      </div>
+    </div>
+    <div class="row align-items-stretch" >
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" >
+        <div class="unit-4 d-flex">
+          <div class="-4-icon mr-4">
+            <img src="{% static '/frontend/icons/man.png' %}" alt="Your Icon" style="width: 50px; height: 50px; border-radius: 50%;">
+          </div>
+          <div>
+            <h3>Manpower Solutions</h3>
+            <p>At Kaarvi Enterprises, we specialize in providing top-notch manpower services tailored to meet your unique requirements.</p>
+            <p><a href="{% url 'ourservices' %}">Learn More</a></p>
           </div>
         </div>
-        <div class="row align-items-stretch" style="margin-left: 50px;">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-house"></span></div>
-              <div>
-                <h3>Find Property</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="{% url 'ourservices' %}">Learn More</a></p>
-              </div>
-            </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100"   >
+        <div class="unit-4 d-flex">
+          <div class="-4-icon mr-4">
+            <img src="{% static '/frontend/icons/home.png' %}" alt="Your Icon" style="width: 50px; height: 50px; border-radius: 50%;">
           </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100" style="margin-left: 350px;">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-coin"></span></div>
-              <div>
-                <h3>Buy Property</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
+          <div>
+            <h3>Hostel Accommodation</h3>
+            <p>We offer safe, clean, and well-equipped hostels with modern facilities for working professionals in Bangalore and Chennai.</p>
+            <p><a href="#">Learn More</a></p>
           </div>
 
         </div>
       </div>
-    </section>
+
+
+    </div>
+  </div>
+</section>
 
 
 
