@@ -60,9 +60,9 @@
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
+                <li><a href="#about-section" class="nav-link">About</a></li>
                 <li><a href="#rooms-section" class="nav-link">Rooms</a></li>
                 <li><a href="#services-section" class="nav-link">Services</a></li>
-                <li><a href="#about-section" class="nav-link">About</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
               </ul>
             </nav>
@@ -225,40 +225,45 @@
     </div><br>
 </section>
 
+  <section class="site-section" id="about-section">
+       <h2 style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px; text-align: center;">
+                About Us
+            </h2><br><br><br>
+      <div class="container">
 
-<div style="text-align: center;" class="site-section" id="rooms-section">
-    <div class="container">
-        <!-- Section Heading -->
-        <div class="section-title">
-            <h2 style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">
-                Explore Your Dream Stay
-            </h2>
-            <p style="font-size: 18px; color: #666; font-weight: 400; max-width: 600px; margin: 0 auto;">
-                Discover your perfect getaway with our stylish rooms, designed for comfort, relaxation, and unforgettable experiences.
-            </p>
-        </div><br><br>
-
-        <!-- Room Listings -->
         <div class="row large-gutters">
-            {% for i in data %}
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-                <div class="ftco-media-1">
-                    <div class="ftco-media-1-inner">
-                        <a href="{% url 'singleroom' Rid=i.id %}" class="d-inline-block mb-4">
-                            <img src="/media/{{ i.roomimage1 }}" class="img-fluid">
-                        </a>
-                        <div class="ftco-media-details">
-                            <h3>{{ i.name }}</h3>
-                            <strong style="font-size: 25px; font-family: Arial, Helvetica, sans-serif;">₹{{ i.price }} / Month</strong>
-                        </div>
-                    </div>
+          <div class="col-lg-6 mb-5">
+
+              <div class="owl-carousel slide-one-item with-dots">
+                  <div><img src="{% static '/frontend/images/Aboutus3.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></div>
+                  <div><img src="{% static '/frontend/images/aboutus2.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></div>
+                  <div><img src="{% static '/frontend/images/about us1.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></div>
                 </div>
-            </div>
-            {% endfor %}
+
+          </div>
+          <div class="col-lg-6 ml-auto"><br>
+
+            <h2 class="section-title mb-3" style="font-size: 36px; font-weight: bold; color: #333;">Why Choose Us?</h2>
+                <p style="font-size: 18px; color: #666; font-weight: 400;">Choose Kaarvi Enterprises for trusted PG accommodations in Bangalore and Chennai. We offer affordable, high-quality services with a customer-first approach, ensuring comfort, convenience, and excellence in every aspect.</p>
+
+                <ul class="list-unstyled ul-check success">
+
+                  <li> <strong>Serving Bangalore and Chennai:</strong> Our services cater to two of India’s largest and most dynamic cities, ensuring convenience and accessibility for our clients and residents.  </li>
+                  <li> <strong>Experience You Can Trust:</strong> Years of expertise in delivering exceptional services. </li>
+                  <li> <strong>Customer-Centric Approach: </strong> Your satisfaction is our top priority.  </li>
+                  <li> <strong>Affordable Solutions:  </strong> High-quality services at competitive prices.  </li>
+                  <li> <strong>Commitment to Quality: </strong> We go the extra mile to ensure excellence in everything we do.</li>
+
+                </ul>
+
+
+
+          </div>
         </div>
-    </div>
-</div>
-      <section class="py-5 bg-primary site-section how-it-works" id="howitworks-section">
+      </div>
+    </section>
+
+   <section class="py-5 bg-primary site-section how-it-works" id="howitworks-section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
@@ -298,46 +303,40 @@
       </div>
     </section>
 
+  <section>
+    <div style="text-align: center;" class="site-section" id="rooms-section">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="section-title">
+            <h2 style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">
+                Explore Your Dream Stay
+            </h2>
+            <p style="font-size: 18px; color: #666; font-weight: 400; max-width: 600px; margin: 0 auto;">
+                Discover your perfect getaway with our stylish rooms, designed for comfort, relaxation, and unforgettable experiences.
+            </p>
+        </div><br><br>
 
-
-   <section class="site-section" id="about-section">
-       <h2 style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px; text-align: center;">
-                About Us
-            </h2><br><br><br>
-      <div class="container">
-
+        <!-- Room Listings -->
         <div class="row large-gutters">
-          <div class="col-lg-6 mb-5">
-
-              <div class="owl-carousel slide-one-item with-dots">
-                  <div><img src="{% static '/frontend/images/Aboutus3.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></div>
-                  <div><img src="{% static '/frontend/images/aboutus2.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></div>
-                  <div><img src="{% static '/frontend/images/about us1.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></div>
+            {% for i in data %}
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="ftco-media-1">
+                    <div class="ftco-media-1-inner">
+                        <a href="{% url 'singleroom' Rid=i.id %}" class="d-inline-block mb-4">
+                            <img src="/media/{{ i.roomimage1 }}" class="img-fluid">
+                        </a>
+                        <div class="ftco-media-details">
+                            <h3>{{ i.name }}</h3>
+                            <strong style="font-size: 25px; font-family: Arial, Helvetica, sans-serif;">₹{{ i.price }} / Month</strong>
+                        </div>
+                    </div>
                 </div>
-
-          </div>
-          <div class="col-lg-6 ml-auto"><br>
-
-            <h2 class="section-title mb-3" style="font-size: 36px; font-weight: bold; color: #333;">Why Choose Us?</h2>
-                <p style="font-size: 18px; color: #666; font-weight: 400;">Choose Kaarvi Enterprises for trusted PG accommodations in Bangalore and Chennai. We offer affordable, high-quality services with a customer-first approach, ensuring comfort, convenience, and excellence in every aspect.</p>
-
-                <ul class="list-unstyled ul-check success">
-
-                  <li> <strong>Serving Bangalore and Chennai:</strong> Our services cater to two of India’s largest and most dynamic cities, ensuring convenience and accessibility for our clients and residents.  </li>
-                  <li> <strong>Experience You Can Trust:</strong> Years of expertise in delivering exceptional services. </li>
-                  <li> <strong>Customer-Centric Approach: </strong> Your satisfaction is our top priority.  </li>
-                  <li> <strong>Affordable Solutions:  </strong> High-quality services at competitive prices.  </li>
-                  <li> <strong>Commitment to Quality: </strong> We go the extra mile to ensure excellence in everything we do.</li>
-
-                </ul>
-
-
-
-          </div>
+            </div>
+            {% endfor %}
         </div>
-      </div>
-    </section>
-
+    </div>
+</div>
+  </section>
 
     <section class="site-section bg-light" id="services-section">
   <div class="container">
@@ -377,27 +376,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
