@@ -346,13 +346,14 @@
     <div class="row mb-5">
       <div class="col-12 text-center">
         <h2 class="section-title mb-3" style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">Services</h2><br>
-      </div>
+
+      </div><br>
     </div>
     <div class="row align-items-stretch" >
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" >
         <div class="unit-4 d-flex">
           <div class="-4-icon mr-4">
-            <img src="{% static '/frontend/icons/man.png' %}" alt="Your Icon" style="width: 50px; height: 50px; border-radius: 50%;">
+            <img src="{% static '/frontend/icons/man.png' %}" alt="Your Icon" style="width: 40px; height: 40px; border-radius: 50%;">
           </div>
           <div>
             <h3>Manpower Solutions</h3>
@@ -364,11 +365,24 @@
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100"   >
         <div class="unit-4 d-flex">
           <div class="-4-icon mr-4">
-            <img src="{% static '/frontend/icons/home.png' %}" alt="Your Icon" style="width: 50px; height: 50px; border-radius: 50%;">
+            <img src="{% static '/frontend/icons/home.png' %}" alt="Your Icon" style="width: 40px; height: 40px; border-radius: 50%;">
           </div>
           <div>
             <h3>Hostel Accommodation</h3>
             <p>We offer safe, clean, and well-equipped hostels with modern facilities for working professionals in Bangalore and Chennai.</p>
+            <p><a href="{% url 'ourservices' %}">Learn More</a></p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100"   >
+        <div class="unit-4 d-flex">
+          <div class="-4-icon mr-4">
+            <img  src="{% static '/frontend/icons/cctv.png' %}" alt="Your Icon" style="width: 50px; height: 50px; border-radius: 50%;">
+          </div>
+          <div>
+            <h3>Focus on Safety</h3>
+            <p>Stay worry-free with 24/7 security and CCTV surveillance, providing a safe and secure environment for your peace of mind.</p>
             <p><a href="{% url 'ourservices' %}">Learn More</a></p>
           </div>
 
@@ -387,8 +401,11 @@
         <div class="row mb-5">
           <div class="col-12 text-center">
             <h2 style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">
-                Contact Us
+                Contact Us Today
             </h2><br>
+             <p style="font-size: 18px; color: #666; font-weight: 400; max-width: 600px; margin: 0 auto;">
+                 Discover how Kaarvi Enterprises can improve your experience. Contact us to explore services or book accommodation in Bangalore or Chennai.
+            </p><br>
           </div>
         </div>
         <div class="row">
@@ -457,9 +474,19 @@
                  </p>
 
              </a>
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a style="font-size: 15px; color: rgb(148, 146, 146);" href="tel:+91 7010810468">+91 7010810468</a></p>
-
+               <div style="margin-bottom: 20px;">
+            <p class="mb-0 font-weight-bold" style="font-size: 16px;">Phone</p>
+            <p class="mb-2">
+             <a style="font-size: 15px; color: rgb(148, 146, 146); text-decoration: none;" href="tel:+917010810468">
+             +91 7010810468
+             </a>
+            </p>
+            <p class="mb-0">
+                 <a style="font-size: 15px; color: rgb(148, 146, 146); text-decoration: none;" href="tel:+919940647771">
+                   +91 99406 47771
+                 </a>
+            </p>
+            </div>
               <p class="mb-0 font-weight-bold">Email Address</p>
               <p class="mb-0"><a style="font-size: 15px; color: rgb(148, 146, 146);" href="mailto:kaarvienterprises@gmail.com">kaarvienterprises@gmail.com</a></p>
 
