@@ -61,8 +61,9 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
                 <li><a href="#about-section" class="nav-link">About</a></li>
-                <li><a href="#rooms-section" class="nav-link">Rooms</a></li>
                 <li><a href="#services-section" class="nav-link">Services</a></li>
+                <li><a href="#rooms-section" class="nav-link">Rooms</a></li>
+
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
               </ul>
             </nav>
@@ -117,113 +118,113 @@
 
 
 
-<section class="all-inclusive-amenities-container">
-    <style>
-        .all-inclusive-amenities-container {
-            padding: 30px;
-            background-color: #ffffff; /* White background */
-            max-width: 1200px;
-            margin: 50px auto;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
-            border-radius: 15px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+<!--<section class="all-inclusive-amenities-container">-->
+<!--    <style>-->
+<!--        .all-inclusive-amenities-container {-->
+<!--            padding: 30px;-->
+<!--            background-color: #ffffff; /* White background */-->
+<!--            max-width: 1200px;-->
+<!--            margin: 50px auto;-->
+<!--            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);-->
+<!--            border-radius: 15px;-->
+<!--            text-align: center;-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            align-items: center;-->
+<!--        }-->
 
-        .all-inclusive-amenities-header {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 40px;
-            color: #333;
-        }
+<!--        .all-inclusive-amenities-header {-->
+<!--            font-size: 28px;-->
+<!--            font-weight: bold;-->
+<!--            margin-bottom: 40px;-->
+<!--            color: #333;-->
+<!--        }-->
 
-        .aia-tile-list {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            width: 100%;
-        }
+<!--        .aia-tile-list {-->
+<!--            display: flex;-->
+<!--            gap: 20px;-->
+<!--            justify-content: center;-->
+<!--            flex-wrap: wrap;-->
+<!--            width: 100%;-->
+<!--        }-->
 
-        .aia-tile {
-            flex: 1 1 calc(16.66% - 20px);
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            max-width: 200px; /* Limit the size of each tile */
-        }
+<!--        .aia-tile {-->
+<!--            flex: 1 1 calc(16.66% - 20px);-->
+<!--            text-align: center;-->
+<!--            padding: 20px;-->
+<!--            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);-->
+<!--            border-radius: 12px;-->
+<!--            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);-->
+<!--            transition: transform 0.3s ease, box-shadow 0.3s ease;-->
+<!--            max-width: 200px; /* Limit the size of each tile */-->
+<!--        }-->
 
-        .aia-tile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-        }
+<!--        .aia-tile:hover {-->
+<!--            transform: translateY(-5px);-->
+<!--            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);-->
+<!--        }-->
 
-        .aia-icon {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 15px;
-        }
+<!--        .aia-icon {-->
+<!--            width: 40px;-->
+<!--            height: 40px;-->
+<!--            margin-bottom: 15px;-->
+<!--        }-->
 
-        .aia-header {
-            font-size: 14px;
-            font-weight: 500;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-        }
+<!--        .aia-header {-->
+<!--            font-size: 14px;-->
+<!--            font-weight: 500;-->
+<!--            font-family: Arial, Helvetica, sans-serif;-->
+<!--            color: #333;-->
+<!--        }-->
 
-        @media (max-width: 1024px) {
-            .aia-tile {
-                flex: 1 1 calc(33.33% - 20px); /* 3 items in a row on medium screens */
-            }
-        }
+<!--        @media (max-width: 1024px) {-->
+<!--            .aia-tile {-->
+<!--                flex: 1 1 calc(33.33% - 20px); /* 3 items in a row on medium screens */-->
+<!--            }-->
+<!--        }-->
 
-        @media (max-width: 768px) {
-            .aia-tile {
-                flex: 1 1 calc(50% - 20px); /* 2 items per row on small screens */
-            }
-        }
+<!--        @media (max-width: 768px) {-->
+<!--            .aia-tile {-->
+<!--                flex: 1 1 calc(50% - 20px); /* 2 items per row on small screens */-->
+<!--            }-->
+<!--        }-->
 
-        @media (max-width: 480px) {
-            .aia-tile {
-                flex: 1 1 100%; /* 1 item per row on extra small screens */
-            }
-        }
-    </style>
+<!--        @media (max-width: 480px) {-->
+<!--            .aia-tile {-->
+<!--                flex: 1 1 100%; /* 1 item per row on extra small screens */-->
+<!--            }-->
+<!--        }-->
+<!--    </style>-->
 
-    <h1 class="all-inclusive-amenities-header">All Inclusive Amenities</h1>
+<!--    <h1 class="all-inclusive-amenities-header">All Inclusive Amenities</h1>-->
 
-    <div class="aia-tile-list">
-        <div class="aia-tile">
-            <img src="{% static '/frontend/icons/cctv.png' %}" alt="CCTV" class="aia-icon" />
-            <div class="aia-header">CCTV Surveillance</div>
-        </div>
-        <div class="aia-tile">
-            <img src="{% static '/frontend/icons/washing-machine.png' %}" alt="Washing Machine" class="aia-icon" />
-            <div class="aia-header">Laundry Facility</div>
-        </div>
-        <div class="aia-tile">
-            <img src="{% static '/frontend/icons/hot.png' %}" alt="Hot Water" class="aia-icon" />
-            <div class="aia-header">24/7 Hot Water</div>
-        </div>
-        <div class="aia-tile">
-            <img src="{% static '/frontend/icons/TV.png' %}" alt="TV" class="aia-icon" />
-            <div class="aia-header">Entertainment Hub</div>
-        </div>
-        <div class="aia-tile">
-            <img src="{% static '/frontend/icons/electric-kettle.png' %}" alt="Iron Box & Kettle" class="aia-icon" />
-            <div class="aia-header">Iron Box & Kettle</div>
-        </div>
-        <div class="aia-tile">
-            <img src="{% static '/frontend/icons/self cooking .png' %}" alt="Self Cooking" class="aia-icon" />
-            <div class="aia-header">Self Cooking</div>
-        </div>
-    </div><br>
-</section>
+<!--    <div class="aia-tile-list">-->
+<!--        <div class="aia-tile">-->
+<!--            <img src="{% static '/frontend/icons/cctv.png' %}" alt="CCTV" class="aia-icon" />-->
+<!--            <div class="aia-header">CCTV Surveillance</div>-->
+<!--        </div>-->
+<!--        <div class="aia-tile">-->
+<!--            <img src="{% static '/frontend/icons/washing-machine.png' %}" alt="Washing Machine" class="aia-icon" />-->
+<!--            <div class="aia-header">Laundry Facility</div>-->
+<!--        </div>-->
+<!--        <div class="aia-tile">-->
+<!--            <img src="{% static '/frontend/icons/hot.png' %}" alt="Hot Water" class="aia-icon" />-->
+<!--            <div class="aia-header">24/7 Hot Water</div>-->
+<!--        </div>-->
+<!--        <div class="aia-tile">-->
+<!--            <img src="{% static '/frontend/icons/TV.png' %}" alt="TV" class="aia-icon" />-->
+<!--            <div class="aia-header">Entertainment Hub</div>-->
+<!--        </div>-->
+<!--        <div class="aia-tile">-->
+<!--            <img src="{% static '/frontend/icons/electric-kettle.png' %}" alt="Iron Box & Kettle" class="aia-icon" />-->
+<!--            <div class="aia-header">Iron Box & Kettle</div>-->
+<!--        </div>-->
+<!--        <div class="aia-tile">-->
+<!--            <img src="{% static '/frontend/icons/self cooking .png' %}" alt="Self Cooking" class="aia-icon" />-->
+<!--            <div class="aia-header">Self Cooking</div>-->
+<!--        </div>-->
+<!--    </div><br>-->
+<!--</section>-->
 
   <section class="site-section" id="about-section">
        <h2 style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px; text-align: center;">
@@ -262,6 +263,62 @@
         </div>
       </div>
     </section>
+
+  <section class="site-section bg-light" id="services-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-3" style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">Services</h2><br>
+        <p style="font-size: 18px; color: #666; font-weight: 400; max-width: 600px; margin: 0 auto;">
+            Explore our wide range of services designed to meet your unique needs with excellence and care.
+            </p><br>
+
+      </div><br>
+    </div>
+    <div class="row align-items-stretch" >
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" >
+        <div class="unit-4 d-flex">
+          <div class="-4-icon mr-4">
+            <img src="{% static '/frontend/icons/man.png' %}" alt="Your Icon" style="width: 40px; height: 40px; border-radius: 50%;">
+          </div>
+          <div>
+            <h3>Manpower Solutions</h3>
+            <p>At Kaarvi Enterprises, we specialize in providing top-notch manpower services tailored to meet your unique requirements.</p>
+            <p><a href="{% url 'ourservices' %}">Learn More</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100"   >
+        <div class="unit-4 d-flex">
+          <div class="-4-icon mr-4">
+            <img src="{% static '/frontend/icons/home.png' %}" alt="Your Icon" style="width: 40px; height: 40px; border-radius: 50%;">
+          </div>
+          <div>
+            <h3>Hostel Accommodation</h3>
+            <p>We offer safe, clean, and well-equipped hostels with modern facilities for working professionals in Bangalore and Chennai.</p>
+            <p><a href="{% url 'ourservices' %}">Learn More</a></p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100"   >
+        <div class="unit-4 d-flex">
+          <div class="-4-icon mr-4">
+            <img  src="{% static '/frontend/icons/cctv.png' %}" alt="Your Icon" style="width: 50px; height: 50px; border-radius: 50%;">
+          </div>
+          <div>
+            <h3>Focus on Safety</h3>
+            <p>Stay worry-free with 24/7 security and CCTV surveillance, providing a safe and secure environment for your peace of mind.</p>
+            <p><a href="{% url 'ourservices' %}">Learn More</a></p>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
 
 
 
@@ -341,61 +398,7 @@
     </section>
 
 
-    <section class="site-section bg-light" id="services-section">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-12 text-center">
-        <h2 class="section-title mb-3" style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 20px;">Services</h2><br>
-        <p style="font-size: 18px; color: #666; font-weight: 400; max-width: 600px; margin: 0 auto;">
-            Explore our wide range of services designed to meet your unique needs with excellence and care.
-            </p><br>
 
-      </div><br>
-    </div>
-    <div class="row align-items-stretch" >
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" >
-        <div class="unit-4 d-flex">
-          <div class="-4-icon mr-4">
-            <img src="{% static '/frontend/icons/man.png' %}" alt="Your Icon" style="width: 40px; height: 40px; border-radius: 50%;">
-          </div>
-          <div>
-            <h3>Manpower Solutions</h3>
-            <p>At Kaarvi Enterprises, we specialize in providing top-notch manpower services tailored to meet your unique requirements.</p>
-            <p><a href="{% url 'ourservices' %}">Learn More</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100"   >
-        <div class="unit-4 d-flex">
-          <div class="-4-icon mr-4">
-            <img src="{% static '/frontend/icons/home.png' %}" alt="Your Icon" style="width: 40px; height: 40px; border-radius: 50%;">
-          </div>
-          <div>
-            <h3>Hostel Accommodation</h3>
-            <p>We offer safe, clean, and well-equipped hostels with modern facilities for working professionals in Bangalore and Chennai.</p>
-            <p><a href="{% url 'ourservices' %}">Learn More</a></p>
-          </div>
-
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100"   >
-        <div class="unit-4 d-flex">
-          <div class="-4-icon mr-4">
-            <img  src="{% static '/frontend/icons/cctv.png' %}" alt="Your Icon" style="width: 50px; height: 50px; border-radius: 50%;">
-          </div>
-          <div>
-            <h3>Focus on Safety</h3>
-            <p>Stay worry-free with 24/7 security and CCTV surveillance, providing a safe and secure environment for your peace of mind.</p>
-            <p><a href="{% url 'ourservices' %}">Learn More</a></p>
-          </div>
-
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
 
 
 
@@ -516,8 +519,9 @@
                 <ul class="list-unstyled">
                   <li><a href="#home-section">HOME</a></li>
                     <li><a href="#about-section">ABOUT</a></li>
+                    <li><a href="#services-section">SERVICES</a></li>
                   <li><a href="#rooms-section">ROOMS</a></li>
-                  <li><a href="#services-section">SERVICES</a></li>
+
                   <li><a href="#contact-section">CONTACT</a></li>
                   <li><a href="{% url 'adminlogin' %}">ADMIN</a></li>
 
