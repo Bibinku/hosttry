@@ -25,10 +25,20 @@ SECRET_KEY = 'django-insecure-51a7mos0=&8bwe*)5xa5x(di_&0qpg*i1647z4v6hi21uyl96h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "kaarvienterprises.onrender.com",
+    "kaarvienterprises.com",
+    "www.kaarvienterprises.com",
+]
+
 
 # CSRF Trusted Origins (Add your Render domain here)
-CSRF_TRUSTED_ORIGINS = ['https://kaarvienterprises.onrender.com']
+CSRF_TRUSTED_ORIGINS = [
+    "https://kaarvienterprises.onrender.com",
+    "https://www.kaarvienterprises.com",
+    "https://kaarvienterprises.com"
+]
+
 
 # Application definition
 INSTALLED_APPS = [
